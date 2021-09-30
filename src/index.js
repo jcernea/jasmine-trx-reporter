@@ -11,7 +11,7 @@ var TRX = require('node-trx'),
  * @param {String} [jasmineTrxConfig.browser] - Browser name to use in suites
  * @param {boolean} [jasmineTrxConfig.groupSuitesIntoSingleFile] - Builds unsharded (single file) suite
  * @param {string} [jasmineTrxConfig.reportName] - Report title
- * @param {boolean} [jasmineTrxConfig.takeScreenshot=true] - Take screenshots on each test
+ * @param {boolean} [jasmineTrxConfig.takeScreenshots=true] - Take screenshots on each test
  * @param {boolean} [jasmineTrxConfig.takeScreenshotsOnlyOnFailures=false] - Take screenshots only on failing tests
  * @param {string} [jasmineTrxConfig.outputFile=Default.trx] - Output file name
  * @param {string} jasmineTrxConfig.folder - Output folder name
