@@ -167,19 +167,20 @@ module.exports = function (jasmineTrxConfig) {
     if (extraFiles) {
       for (var filePath of extraFiles) {
         /*Copy file over to TRX test loc*/
-        const screenshotUUID = uuid.v4()
+		const extension = path.extname(filePath)
+        const fileUUID = uuid.v4()
         const newFile = path.join(
           outputScreenshotsFolder,
           'In',
           trxResult.executionId,
-          screenshotUUID + '.png'
+          fileUUID + extension 
         )
 
         await new Promise((res, rej) => {
           fs.copyFile(filePath, newFile, (err) => {
             if (err) rej(err)
 
-            trxResult.resultFiles.push({ path: screenshotUUID + '.png' })
+            trxResult.resultFiles.push({ path: fileUUID + extension })
             res(true)
           })
         })
